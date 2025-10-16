@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Yash Gupta — DevOps & Cloud Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-pQ6mX2Y3KJbq0s7Yq0J3ZgJ4Jj1HqXn6y0b2q7Y7Qf3G1q9a5K2G6x0y1z9s2b4c0X9Y0Z3a4b5c6d7e8f9g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    :root{
+      --bg:#0f1720; /* charcoal */
+      --card:#26303a;
+      --muted:#9aa5ad;
+      --accent:#12b0b6; /* teal-cyan */
+      --glass: rgba(255,255,255,0.03);
+      --glass-2: rgba(255,255,255,0.02);
+      --radius:12px;
+      --maxw:1100px;
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      background: radial-gradient(circle at 10% 20%, rgba(18,176,182,0.04), transparent 10%), radial-gradient(circle at 90% 80%, rgba(6,10,15,0.04), transparent 20%), var(--bg);
+      color:#e8eef0;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      padding:40px 20px;
+      display:flex;justify-content:center;
+    }
+    .container{width:100%;max-width:var(--maxw)}
+
+    header{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-bottom:28px}
+    .brand{display:flex;gap:14px;align-items:center}
+    .avatar{width:72px;height:72px;border-radius:14px;background:linear-gradient(135deg,var(--glass),var(--glass-2));display:flex;align-items:center;justify-content:center;font-weight:800;font-size:22px;color:var(--accent);border:1px solid rgba(255,255,255,0.03)}
+    h1{margin:0;font-size:20px;letter-spacing:0.2px}
+    .tagline{color:var(--muted);font-size:13px;margin-top:4px}
+
+    .actions{display:flex;gap:10px;align-items:center}
+    .btn{background:transparent;border:1px solid rgba(255,255,255,0.04);padding:8px 12px;border-radius:10px;color:var(--muted);font-weight:600;font-size:13px;text-decoration:none;display:inline-flex;gap:8px;align-items:center}
+    .btn:hover{border-color:rgba(18,176,182,0.28);color:var(--accent)}
+
+    main{display:grid;grid-template-columns:1fr 320px;gap:28px}
+
+    /* left column */
+    .left{background:transparent}
+    .about{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.03);margin-bottom:20px}
+    .about h2{margin:0 0 8px 0;font-size:16px}
+    .about p{margin:0;color:var(--muted);font-size:14px;line-height:1.5}
+
+    .projects-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:20px;border-radius:12px;border:1px solid rgba(255,255,255,0.03);min-height:160px;position:relative;overflow:hidden}
+    .card h3{margin:0 0 8px 0;font-size:15px}
+    .card p{margin:0;color:var(--muted);font-size:13px}
+    .badges{position:absolute;left:20px;bottom:20px;display:flex;gap:8px}
+    .badge{background:rgba(18,176,182,0.12);color:var(--accent);padding:6px 8px;border-radius:999px;font-weight:600;font-size:12px;border:1px solid rgba(18,176,182,0.08)}
+    .card:hover{transform:translateY(-6px);box-shadow:0 8px 30px rgba(2,6,10,0.6)}
+    .project-img{position:absolute;right:12px;top:12px;width:90px;height:60px;border-radius:8px;background:linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));opacity:0.08}
+
+    /* right column */
+    aside{position:sticky;top:28px;height:max-content}
+    .card-stats{padding:16px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);border:1px solid rgba(255,255,255,0.03)}
+    .stats-grid{display:flex;gap:12px;flex-wrap:wrap}
+    .stat{flex:1;min-width:120px}
+    .stat h4{margin:0;font-size:14px}
+    .stat p{margin:6px 0 0 0;color:var(--muted);font-size:13px}
+
+    .contact{margin-top:14px;padding:12px;border-radius:10px;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.03)}
+    .contact a{display:flex;align-items:center;gap:10px;color:var(--muted);text-decoration:none;font-size:14px;margin-bottom:8px}
+    .contact a:hover{color:var(--accent)}
+
+    footer{margin-top:30px;color:var(--muted);font-size:13px;text-align:center}
+
+    /* responsive */
+    @media (max-width:980px){
+      main{grid-template-columns:1fr;}
+      .projects-grid{grid-template-columns:1fr}
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="avatar">YG</div>
+        <div>
+          <h1>Yash Gupta</h1>
+          <div class="tagline">DevOps & Cloud Engineer | Infrastructure Automation Expert | CI/CD Innovator</div>
+        </div>
+      </div>
+      <div class="actions">
+        <a class="btn" href="https://github.com/Yash-xoxo" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
+        <a class="btn" href="https://www.linkedin.com/in/yash-gupta-4285b8312/" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i> LinkedIn</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="left">
+        <div class="about">
+          <h2>About</h2>
+          <p>DevOps & Cloud Engineer | Infrastructure Automation Expert | CI/CD Innovator driving 70% faster deployments through automation, orchestration, and resilient cloud architectures.</p>
+        </div>
+
+        <div class="projects-grid">
+          <article class="card">
+            <div class="project-img"></div>
+            <h3>Deployed Containerized Microservices on AWS ECS</h3>
+            <p>Successfully deployed and managed containerized microservices architecture on AWS ECS with auto-scaling and blue/green deployments.</p>
+            <div class="badges"><span class="badge">AWS</span><span class="badge">Docker</span></div>
+          </article>
+
+          <article class="card">
+            <div class="project-img"></div>
+            <h3>Kubernetes Cluster Management</h3>
+            <p>Managed and orchestrated Kubernetes clusters for production workloads with high availability and fault tolerance.</p>
+            <div class="badges"><span class="badge">Kubernetes</span><span class="badge">Cluster Mgmt</span></div>
+          </article>
+
+          <article class="card">
+            <div class="project-img"></div>
+            <h3>Infrastructure as Code using Terraform</h3>
+            <p>Implemented Infrastructure as Code practices using Terraform for automated cloud resource provisioning and environment reproducibility.</p>
+            <div class="badges"><span class="badge">Terraform</span><span class="badge">IaC</span></div>
+          </article>
+
+          <article class="card">
+            <div class="project-img"></div>
+            <h3>Monitoring & Alerting with Prometheus & Grafana</h3>
+            <p>Built comprehensive monitoring and alerting infrastructure using Prometheus for metrics collection and Grafana for actionable dashboards.</p>
+            <div class="badges"><span class="badge">Prometheus</span><span class="badge">Grafana</span></div>
+          </article>
+
+          <article class="card">
+            <div class="project-img"></div>
+            <h3>CI/CD Pipeline with Jenkins</h3>
+            <p>Automated deployment pipeline with Jenkins, Docker, and Kubernetes integration for seamless software delivery.</p>
+            <div class="badges"><span class="badge">Jenkins</span><span class="badge">CI/CD</span></div>
+          </article>
+
+          <article class="card">
+            <div class="project-img"></div>
+            <h3>Menu-Based Python Automation</h3>
+            <p>Interactive CLI tool for system automation and task management with intuitive menu-driven interface.</p>
+            <div class="badges"><span class="badge">Python</span><span class="badge">Automation</span></div>
+          </article>
+
+          <article class="card">
+            <div class="project-img"></div>
+            <h3>Data Analytics Dashboard</h3>
+            <p>Real-time data visualization dashboard with monitoring capabilities and interactive charts for insights.</p>
+            <div class="badges"><span class="badge">Analytics</span><span class="badge">Dashboard</span></div>
+          </article>
+
+          <article class="card">
+            <div class="project-img"></div>
+            <h3>Stepper Motor Control with PS3 Joystick</h3>
+            <p>Hardware control system using Python and PS3 controller integration for precise motor movements and UI control.</p>
+            <div class="badges"><span class="badge">Python</span><span class="badge">Hardware</span></div>
+          </article>
+
+          <article class="card">
+            <div class="project-img"></div>
+            <h3>Custom Compiler in Python</h3>
+            <p>Built a custom programming language compiler from scratch with lexical analysis and code generation components.</p>
+            <div class="badges"><span class="badge">Python</span><span class="badge">Compiler</span></div>
+          </article>
+        </div>
+
+        <footer>
+          <small>Portfolio generated for <strong>Yash Gupta</strong>. GitHub: <a href="https://github.com/Yash-xoxo" target="_blank" rel="noopener" style="color:var(--accent);text-decoration:none">Yash-xoxo</a></small>
+        </footer>
+      </section>
+
+      <aside>
+        <div class="card-stats">
+          <h3 style="margin:0 0 8px 0">Key Capabilities</h3>
+          <div class="stats-grid">
+            <div class="stat"><h4>Cloud / Infra</h4><p>AWS, Terraform, IaC</p></div>
+            <div class="stat"><h4>Containers</h4><p>Docker, Kubernetes, ECS</p></div>
+            <div class="stat"><h4>CI/CD</h4><p>Jenkins, Pipelines, Automation</p></div>
+          </div>
+
+          <div class="contact">
+            <a href="mailto:yashg5577@gmail.com"><i class="fa fa-envelope"></i> yashg5577@gmail.com</a>
+            <a href="tel:+917839491779"><i class="fa fa-phone"></i> +91 7839491779</a>
+            <a href="https://www.linkedin.com/in/yash-gupta-4285b8312/" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i> linkedin.com/in/yash-gupta-4285b8312</a>
+            <a href="https://github.com/Yash-xoxo" target="_blank" rel="noopener"><i class="fab fa-github"></i> github.com/Yash-xoxo</a>
+          </div>
+        </div>
+      </aside>
+    </main>
+  </div>
+</body>
+</html>
