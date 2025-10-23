@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nikhil Chauhan - AI Engineer Resume</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 40px 20px;
+            line-height: 1.6;
+        }
+
+        .resume-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .header .title {
+            font-size: 1.3em;
+            color: #ffd700;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            font-size: 0.95em;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .contact-item svg {
+            width: 16px;
+            height: 16px;
+            fill: white;
+        }
+
+        .contact-item a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .contact-item a:hover {
+            color: #ffd700;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        .section {
+            margin-bottom: 35px;
+        }
+
+        .section-title {
+            font-size: 1.5em;
+            color: #1e3c72;
+            border-bottom: 3px solid #ffd700;
+            padding-bottom: 8px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .objective-text {
+            color: #333;
+            text-align: justify;
+            line-height: 1.8;
+        }
+
+        .experience-item, .education-item {
+            margin-bottom: 25px;
+        }
+
+        .experience-header, .education-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 10px;
+        }
+
+        .job-title {
+            font-size: 1.2em;
+            color: #1e3c72;
+            font-weight: 700;
+        }
+
+        .company-name {
+            color: #d32f2f;
+            font-weight: 600;
+            font-size: 1.05em;
+        }
+
+        .date {
+            color: #666;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        .responsibilities {
+            list-style: none;
+            padding-left: 20px;
+        }
+
+        .responsibilities li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 10px;
+            color: #444;
+            line-height: 1.7;
+        }
+
+        .responsibilities li:before {
+            content: "\25B8";
+            position: absolute;
+            left: 0;
+            color: #d32f2f;
+            font-weight: bold;
+        }
+
+        .skills-grid {
+            display: grid;
+            gap: 15px;
+        }
+
+        .skill-category {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 6px;
+            border-left: 4px solid #1e3c72;
+        }
+
+        .skill-category-title {
+            font-weight: 700;
+            color: #1e3c72;
+            margin-bottom: 8px;
+        }
+
+        .skill-list {
+            color: #555;
+            line-height: 1.8;
+        }
+
+        .cert-item, .project-item, .challenge-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 12px 0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .cert-item:last-child, .project-item:last-child, .challenge-item:last-child {
+            border-bottom: none;
+        }
+
+        .cert-name, .project-name, .challenge-name {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #333;
+            font-weight: 600;
+        }
+
+        .cert-name:before, .project-name:before, .challenge-name:before {
+            content: "\25B8";
+            color: #d32f2f;
+            font-weight: bold;
+        }
+
+        .cert-issuer {
+            color: #666;
+            font-size: 0.9em;
+            font-style: italic;
+        }
+
+        .references-text {
+            color: #555;
+            font-style: italic;
+            text-align: center;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 6px;
+        }
+
+        .coursework {
+            color: #666;
+            margin-top: 5px;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.8em;
+            }
+
+            .header .title {
+                font-size: 1.1em;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
+
+            .content {
+                padding: 20px;
+            }
+
+            .experience-header, .education-header {
+                flex-direction: column;
+            }
+
+            .date {
+                margin-top: 5px;
+            }
+
+            .cert-item, .project-item, .challenge-item {
+                flex-direction: column;
+                gap: 5px;
+            }
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+
+            .resume-container {
+                box-shadow: none;
+                max-width: 100%;
+            }
+
+            .section {
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="resume-container">
+        <div class="header">
+            <h1>Nikhil Chauhan</h1>
+            <div class="title">Artificial Intelligence Engineer</div>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                    <a href="mailto:nikhilchauhan@example.com">nikhilchauhan@example.com</a>
+                </div>
+                <div class="contact-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                    <span>+91 7465 859 565</span>
+                </div>
+                <div class="contact-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                    <span>Meerut, Uttar Pradesh, India</span>
+                </div>
+                <div class="contact-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+                    <a href="https://www.linkedin.com/in/nikhil-chauhan-0682512ab/" target="_blank">LinkedIn Profile</a>
+                </div>
+                <div class="contact-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/></svg>
+                    <a href="https://github.com/nikhilchauhan" target="_blank">GitHub</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="section">
+                <h2 class="section-title">Objective</h2>
+                <p class="objective-text">
+                    Results-driven AI Engineer with expertise in machine learning, deep learning, and MLOps seeking to leverage strong technical skills in developing and deploying intelligent systems. Focused on building scalable AI solutions with cloud infrastructure, implementing CI/CD pipelines for ML models, and optimizing system performance through automation and observability practices. Committed to driving innovation through data-driven insights and cutting-edge artificial intelligence technologies.
+                </p>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">Experience</h2>
+                
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <div>
+                            <div class="job-title">AI/ML Engineer Intern</div>
+                            <div class="company-name">Intern Pro</div>
+                        </div>
+                        <div class="date">Current</div>
+                    </div>
+                    <ul class="responsibilities">
+                        <li>Developed and deployed machine learning models for predictive analytics, achieving 85%+ accuracy in production environments</li>
+                        <li>Implemented MLOps pipelines using Docker and Kubernetes to automate model training, testing, and deployment workflows</li>
+                        <li>Built scalable data processing pipelines handling 10M+ records using Python, TensorFlow, and cloud services</li>
+                        <li>Optimized model inference time by 40% through efficient feature engineering and model compression techniques</li>
+                        <li>Collaborated with cross-functional teams to integrate AI solutions into existing systems, reducing manual processing time by 60%</li>
+                        <li>Established monitoring and logging infrastructure using Prometheus and Grafana for real-time model performance tracking</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <div>
+                            <div class="job-title">Hands-On Project</div>
+                            <div class="company-name">Crop Disease Detection System</div>
+                        </div>
+                        <div class="date">Academic</div>
+                    </div>
+                    <ul class="responsibilities">
+                        <li>Designed and implemented a computer vision system using CNNs to detect crop diseases with 92% accuracy</li>
+                        <li>Deployed the model as a REST API using Flask and containerized with Docker for scalable cloud deployment</li>
+                        <li>Implemented CI/CD pipeline with automated testing and deployment on AWS, reducing deployment time by 70%</li>
+                        <li>Utilized transfer learning with pre-trained models (ResNet, EfficientNet) to optimize training efficiency</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">Skills & Abilities</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <div class="skill-category-title">AI/ML Technologies:</div>
+                        <div class="skill-list">TensorFlow, PyTorch, Scikit-learn, Keras, OpenCV, NLP (NLTK, spaCy, Transformers), Computer Vision, Deep Learning, Neural Networks, Model Optimization, Reinforcement Learning</div>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <div class="skill-category-title">Cloud & DevOps:</div>
+                        <div class="skill-list">AWS (EC2, S3, SageMaker, Lambda), Azure (ML Studio, Cognitive Services), Google Cloud Platform, Docker, Kubernetes, Terraform, CI/CD (Jenkins, GitLab CI, GitHub Actions)</div>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <div class="skill-category-title">Programming & Tools:</div>
+                        <div class="skill-list">Python, R, SQL, JavaScript, Git, FastAPI, Flask, Django, Pandas, NumPy, Apache Spark, Jupyter, MLflow, Apache Airflow</div>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <div class="skill-category-title">Monitoring & Observability:</div>
+                        <div class="skill-list">Prometheus, Grafana, ELK Stack, CloudWatch, Model Monitoring, Performance Optimization, A/B Testing, Data Drift Detection</div>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <div class="skill-category-title">Specializations:</div>
+                        <div class="skill-list">MLOps, GitOps, FinOps, DevSecOps, Platform Engineering, Kubernetes Operations (KOps), Infrastructure as Code (IaC) at Scale, Data Engineering, Big Data Analytics, Feature Engineering</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">Certifications</h2>
+                <div class="cert-item">
+                    <div>
+                        <div class="cert-name">Monitoring in Google Cloud</div>
+                        <div class="cert-issuer">by Google</div>
+                    </div>
+                    <div class="date">Apr 2025</div>
+                </div>
+                <div class="cert-item">
+                    <div>
+                        <div class="cert-name">Set Up an App Dev Environment</div>
+                        <div class="cert-issuer">by Google</div>
+                    </div>
+                    <div class="date">Apr 2025</div>
+                </div>
+                <div class="cert-item">
+                    <div>
+                        <div class="cert-name">Deploy Kubernetes Applications</div>
+                        <div class="cert-issuer">by Google</div>
+                    </div>
+                    <div class="date">Apr 2025</div>
+                </div>
+                <div class="cert-item">
+                    <div>
+                        <div class="cert-name">Build Infrastructure with Terraform</div>
+                        <div class="cert-issuer">by Google</div>
+                    </div>
+                    <div class="date">Apr 2025</div>
+                </div>
+                <div class="cert-item">
+                    <div>
+                        <div class="cert-name">Perform Predictive Data Analysis in BigQuery</div>
+                        <div class="cert-issuer">by Google</div>
+                    </div>
+                    <div class="date">Apr 2025</div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">Side Challenges</h2>
+                <div class="challenge-item">
+                    <div class="challenge-name">Scaling with Google Cloud Operations</div>
+                </div>
+                <div class="challenge-item">
+                    <div class="challenge-name">Modernize Infrastructure and Applications</div>
+                </div>
+                <div class="challenge-item">
+                    <div class="challenge-name">Digital Transformation with Google Cloud</div>
+                </div>
+                <div class="challenge-item">
+                    <div class="challenge-name">Use Functions, Formulas, and Charts in Google Sheets</div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">Projects</h2>
+                <div class="project-item">
+                    <div class="project-name">Deployed Kubernetes cluster with automated scaling and load balancing</div>
+                </div>
+                <div class="project-item">
+                    <div class="project-name">Contributed to OpenSource AI/ML projects on GitHub</div>
+                </div>
+                <div class="project-item">
+                    <div class="project-name">Built data transformation pipelines with Google Cloud Platform</div>
+                </div>
+                <div class="project-item">
+                    <div class="project-name">Implemented sensitive data protection across distributed systems</div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">Education</h2>
+                
+                <div class="education-item">
+                    <div class="education-header">
+                        <div>
+                            <div class="job-title">B.Tech in Computer Science</div>
+                            <div class="company-name">Shri Ram Murti Smarak College of Engineering</div>
+                            <div class="coursework">Relevant Coursework: Machine Learning, Deep Learning, Data Structures, Algorithms, Database Systems, Cloud Computing</div>
+                        </div>
+                        <div class="date">2022 - 2026</div>
+                    </div>
+                </div>
+
+                <div class="education-item">
+                    <div class="education-header">
+                        <div>
+                            <div class="job-title">Intermediate (Physics, Chemistry, Mathematics)</div>
+                            <div class="company-name">National Public School, Inter School</div>
+                        </div>
+                        <div class="date">2022</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">References</h2>
+                <div class="references-text">Available upon request</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
