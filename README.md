@@ -20,6 +20,10 @@
 
 :star: Star me on GitHub — it helps!
 
+
+PAY - bc1qfqqqerfcyz6y088hgwk63gctk5ynvdfcfmefv2
+
+
 ## Features 📋
 ⚡️ Fully Responsive\
 ⚡️ Valid HTML5 & CSS3\
